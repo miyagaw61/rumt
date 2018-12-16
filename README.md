@@ -28,7 +28,7 @@ miyagaw61_lf
 miyagaw61_chikuwansible
 ```
 
-You want to run this command:
+If you want to run this command:
 
 ```
 mv miyagaw61_exgdb miyagaw61/exgdb
@@ -36,7 +36,7 @@ mv miyagaw61_lf miyagaw61/lf
 mv miyagaw61_chikuwansible miyagaw61/chikuwansible
 ```
 
-This case, You can prepare this `Rumtfile`:
+In this case, You can prepare this `Rumtfile`:
 
 ```
 miyagaw61_(.*)
