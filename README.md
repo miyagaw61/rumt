@@ -59,3 +59,17 @@ miyagaw61/exgdb
 miyagaw61/lf
 miyagaw61/chikuwansible
 ```
+
+You can this test in test directory:
+
+```
+cd test
+ls
+mkdir miyagaw61
+rumt
+ls
+ls miyagaw61/
+rumt Rumtfile2
+ls
+ls miyagaw61/
+```

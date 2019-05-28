@@ -1,0 +1,3 @@
+find | grep '^./miyagaw61/.*'
+(.*)/(.*)
+mv {{1}}/{{2}} miyagaw61_{{2}}
