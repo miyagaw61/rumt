@@ -39,6 +39,7 @@ mv miyagaw61_chikuwansible miyagaw61/chikuwansible
 In this case, You can prepare this `Rumtfile`:
 
 ```
+find -maxdepth 1 -name 'miyagaw61_*'
 miyagaw61_(.*)
 mv miyagaw61_{{1}} miyagaw61/{{1}}
 ```
