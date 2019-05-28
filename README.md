@@ -20,12 +20,12 @@ rumt
 
 ### Rumtfile
 
-Now `find -maxdepth 1 -name 'hoge_*'` output:
+Now `find -name 'hoge_*'` output:
 
 ```
-hoge_exgdb
-hoge_lf
-hoge_chikuwansible
+./hoge_exgdb
+./hoge_lf
+./hoge_chikuwansible
 ```
 
 If you want to run this command:
@@ -40,7 +40,7 @@ mv hoge_chikuwansible hoge/chikuwansible
 In this case, You can prepare this `Rumtfile`:
 
 ```
-find -maxdepth 1 -name 'hoge_*'
+find -name 'hoge_*'
 hoge_(.*)
 mv hoge_{{1}} hoge/{{1}}
 ```
@@ -52,9 +52,10 @@ mkdir hoge
 rumt
 ```
 
-Then `find hoge/ -maxdepth 1` output:
+Then `find hoge/` output:
 
 ```
+hoge/
 hoge/exgdb
 hoge/lf
 hoge/chikuwansible
@@ -63,13 +64,39 @@ hoge/chikuwansible
 You can this test in test directory:
 
 ```
-cd test
-ls
-mkdir hoge
-rumt
-ls
-ls hoge/
-rumt Rumtfile2
-ls
-ls hoge/
+$ cd test/
+$ ls
+fizz_buzz  foo_bar  hoge_chikuwansible  hoge_exgdb  hoge_lf  Rumtfile  Rumtfile2
+$ find -name 'hoge_*'
+./hoge_chikuwansible
+./hoge_lf
+./hoge_exgdb
+$ mkdir hoge
+$ cat Rumtfile
+find -name 'hoge_*'
+hoge_(.*)
+mv hoge_{{1}} hoge/{{1}}
+$ rumt
+$ ls
+hoge  fizz_buzz  foo_bar  Rumtfile  Rumtfile2
+$ ls hoge/
+chikuwansible  exgdb  lf
+```
+
+You can revert it back:
+
+```
+$ find | grep '^./hoge/.*'
+./hoge/lf
+./hoge/chikuwansible
+./hoge/exgdb
+$ cat Rumtfile2
+find | grep '^./hoge/.*'
+(.*)/(.*)
+mv {{1}}/{{2}} hoge_{{2}}
+$ rumt Rumtfile2
+$ ls
+hoge  fizz_buzz  foo_bar  hoge_chikuwansible  hoge_exgdb  hoge_lf  Rumtfile  Rumtfile2
+$ ls hoge/
+$
 ```
