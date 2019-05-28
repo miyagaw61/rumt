@@ -20,44 +20,44 @@ rumt
 
 ### Rumtfile
 
-Now `find -maxdepth 1 -name 'miyagaw61_*'` output:
+Now `find -maxdepth 1 -name 'hoge_*'` output:
 
 ```
-miyagaw61_exgdb
-miyagaw61_lf
-miyagaw61_chikuwansible
+hoge_exgdb
+hoge_lf
+hoge_chikuwansible
 ```
 
 If you want to run this command:
 
 ```
-mkdir miyagaw61
-mv miyagaw61_exgdb miyagaw61/exgdb
-mv miyagaw61_lf miyagaw61/lf
-mv miyagaw61_chikuwansible miyagaw61/chikuwansible
+mkdir hoge
+mv hoge_exgdb hoge/exgdb
+mv hoge_lf hoge/lf
+mv hoge_chikuwansible hoge/chikuwansible
 ```
 
 In this case, You can prepare this `Rumtfile`:
 
 ```
-find -maxdepth 1 -name 'miyagaw61_*'
-miyagaw61_(.*)
-mv miyagaw61_{{1}} miyagaw61/{{1}}
+find -maxdepth 1 -name 'hoge_*'
+hoge_(.*)
+mv hoge_{{1}} hoge/{{1}}
 ```
 
 And run `rumt`:
 
 ```
-mkdir miyagaw61
+mkdir hoge
 rumt
 ```
 
-Then `find miyagaw61/ -maxdepth 1` output:
+Then `find hoge/ -maxdepth 1` output:
 
 ```
-miyagaw61/exgdb
-miyagaw61/lf
-miyagaw61/chikuwansible
+hoge/exgdb
+hoge/lf
+hoge/chikuwansible
 ```
 
 You can this test in test directory:
@@ -65,11 +65,11 @@ You can this test in test directory:
 ```
 cd test
 ls
-mkdir miyagaw61
+mkdir hoge
 rumt
 ls
-ls miyagaw61/
+ls hoge/
 rumt Rumtfile2
 ls
-ls miyagaw61/
+ls hoge/
 ```
