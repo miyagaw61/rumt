@@ -31,6 +31,7 @@ miyagaw61_chikuwansible
 If you want to run this command:
 
 ```
+mkdir miyagaw61
 mv miyagaw61_exgdb miyagaw61/exgdb
 mv miyagaw61_lf miyagaw61/lf
 mv miyagaw61_chikuwansible miyagaw61/chikuwansible
@@ -47,6 +48,7 @@ mv miyagaw61_{{1}} miyagaw61/{{1}}
 And run `rumt`:
 
 ```
+mkdir miyagaw61
 rumt
 ```
 
