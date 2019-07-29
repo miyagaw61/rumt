@@ -102,3 +102,7 @@ hoge  fizz_buzz  foo_bar  hoge_chikuwansible  hoge_exgdb  hoge_lf  Rumtfile  Rum
 $ ls hoge/
 $
 ```
+
+# Note
+
+- If target file path has space, you have to use `"{{0}}"` instead of `{{0}}`.
