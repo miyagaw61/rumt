@@ -14,8 +14,8 @@ split_regex = re.compile(r"&")
 dir_regex = re.compile(r".*/")
 
 def show_usage():
-    print("rumt - Run Many Times")
-    print("Usage: rumt [CONFIG_FILE]")
+    print("rumt - RUn Many Times")
+    print("Usage: rumt [Rumtfile-path]")
 
 def remove_tmpfiles():
     Shell(f"rm -rf {tmp_shellscript_name}").call()
