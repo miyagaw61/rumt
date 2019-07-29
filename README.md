@@ -1,6 +1,6 @@
 ## rumt - RUn Many Times
 
-You can run same command many times
+You can run same command many times for many files
 
 ### Install
 
