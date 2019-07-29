@@ -95,7 +95,7 @@ $ find | grep '^./hoge/.*'
 $ cat Rumtfile2
 find | grep '^./hoge/.*'
 (.*)/(.*)
-mv {{1}}/{{2}} hoge_{{2}}
+mv {{0}} hoge_{{2}}
 $ rumt Rumtfile2
 $ ls
 hoge  fizz_buzz  foo_bar  hoge_chikuwansible  hoge_exgdb  hoge_lf  Rumtfile  Rumtfile2
