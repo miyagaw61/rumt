@@ -28,7 +28,7 @@ Now `find -name 'hoge_*'` output:
 ./hoge_chikuwansible
 ```
 
-If you want to run this command:
+You want to run this command:
 
 ```
 mkdir hoge
