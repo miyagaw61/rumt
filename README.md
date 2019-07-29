@@ -1,8 +1,8 @@
-## rumt - RUn Many Times
+# rumt - RUn Many Times
 
 You can run same command many times for many files
 
-### Install
+## Install
 
 ```
 cd /path/to/
@@ -11,14 +11,14 @@ cp -a ./rumt/rumt /usr/local/bin/
 pip install --git https://github.com/miyagaw61/enert
 ```
 
-### Usage
+## Usage
 
 ```
 vim Rumtfile
 rumt
 ```
 
-### Rumtfile
+## Rumtfile
 
 Now `find -name 'hoge_*'` output:
 
@@ -61,7 +61,9 @@ hoge/lf
 hoge/chikuwansible
 ```
 
-You can this test in test directory:
+## Try This Test
+
+You can try this test in `test` directory:
 
 ```
 $ cd test/
