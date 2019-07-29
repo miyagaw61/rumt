@@ -42,7 +42,7 @@ In this case, You can prepare this `Rumtfile`:
 ```
 find -name 'hoge_*'
 hoge_(.*)
-mv hoge_{{1}} hoge/{{1}}
+mv hoge_{{1}} hoge/{{1}} # You can use {{0}} instead of hoge_{{1}}
 ```
 
 And run `rumt`:
