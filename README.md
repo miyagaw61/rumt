@@ -8,7 +8,7 @@ You can run same command many times for many files
 cd /path/to/
 git clone https://github.com/miyagaw61/rumt
 cp -a ./rumt/rumt /usr/local/bin/
-pip install --git https://github.com/miyagaw61/enert
+pip install git+https://github.com/miyagaw61/enert
 ```
 
 ## Usage
