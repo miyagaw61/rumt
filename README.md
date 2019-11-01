@@ -42,7 +42,7 @@ In this case, You can prepare this `Rumtfile`:
 ```
 find -name 'hoge_*'
 hoge_(.*)
-mv hoge_{{1}} hoge/{{1}} # You can use {{0}} instead of hoge_{{1}}
+mv "hoge_{{1}}" "hoge/{{1}}" # You can use "{{0}}" instead of "hoge_{{1}}"
 ```
 
 And run `rumt`:
@@ -77,7 +77,7 @@ $ mkdir hoge
 $ cat Rumtfile
 find -name 'hoge_*'
 hoge_(.*)
-mv hoge_{{1}} hoge/{{1}}
+mv "hoge_{{1}}" "hoge/{{1}}"
 $ rumt
 $ ls
 hoge  fizz_buzz  foo_bar  Rumtfile  Rumtfile2
@@ -95,7 +95,7 @@ $ find | grep '^./hoge/.*'
 $ cat Rumtfile2
 find | grep '^./hoge/.*'
 (.*)/(.*)
-mv {{0}} hoge_{{2}}
+mv "{{0}}" "hoge_{{2}}"
 $ rumt Rumtfile2
 $ ls
 hoge  fizz_buzz  foo_bar  hoge_chikuwansible  hoge_exgdb  hoge_lf  Rumtfile  Rumtfile2
