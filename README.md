@@ -73,10 +73,12 @@ $ find -name 'hoge_*'
 ./hoge_chikuwansible
 ./hoge_lf
 ./hoge_exgdb
-$ mkdir hoge
 $ cat Rumtfile
 find -name 'hoge_*'
 hoge_(.*)
+if [ ! -e hoge/ ] ;then
+    mkdir hoge
+fi
 mv "hoge_{{1}}" "hoge/{{1}}"
 $ rumt
 $ ls

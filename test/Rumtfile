@@ -1,3 +1,6 @@
 find -name 'hoge_*'
 hoge_(.*)
+if [ ! -e hoge/ ] ;then
+    mkdir hoge
+fi
 mv "hoge_{{1}}" "hoge/{{1}}"
