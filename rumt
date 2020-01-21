@@ -69,7 +69,7 @@ def do_rumt(target_file_command, target_file_pattern, rumtfile_name):
     #targetable_file_names, _ = Shell(f"find {target_file_dir} -maxdepth 1 -name '{target_file_base}' -printf '%p\n'").readlines()
     targetable_file_names, _ = Shell(target_file_command).readlines()
     for targetable_file_name in targetable_file_names:
-        if targetable_file_name in ["./" + rumtfile_name, "./" + tmp_shellscript_name, "./" + final_name]:
+        if targetable_file_name in ["./" + rumtfile_name, "./" + tmp_shellscript_name, "./" + final_name, rumtfile_name, tmp_shellscript_name, final_name]:
             continue
         #if targetable_file_name == target_file_dir:
         #    continue
